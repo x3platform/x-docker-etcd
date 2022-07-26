@@ -10,5 +10,5 @@ docker pull x3platform/etcd:3.4
 # login
 docker login -u [USERNAME] -p [PASSWORD]
 
-docker buildx build --push --tag x3platform/etcd:3.4 --platform linux/amd64,linux/arm64 --file ./build/Dockerfile ./build/ 
+docker buildx build --push --tag x3platform/etcd:3.4 --platform linux/amd64,linux/arm64 --file ./build/Dockerfile ./build/
 ```
