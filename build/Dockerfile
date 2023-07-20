@@ -30,7 +30,7 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ] ; then \
         && export OS_ARCH="amd64"; \
     fi; \
     echo Download http://dl.x3platform.com/vendors/etcd/${ETCD_VERSION}/etcd-${ETCD_VERSION}-${OS_NAME}-${OS_ARCH}.tar.gz \
-    && cd /tmp && curl -O http://dl.x3platform.com/vendors/etcd/${ETCD_VERSION}/etcd-${ETCD_VERSION}-${OS_NAME}-${OS_ARCH}.tar.gz \
+    && cd /tmp && curl -L -O http://dl.x3platform.com/vendors/etcd/${ETCD_VERSION}/etcd-${ETCD_VERSION}-${OS_NAME}-${OS_ARCH}.tar.gz \
     && tar -zxvf /tmp/etcd-${ETCD_VERSION}-${OS_NAME}-${OS_ARCH}.tar.gz -C /opt/ \
     && cd /opt/etcd-${ETCD_VERSION}-${OS_NAME}-${OS_ARCH} \
     && mkdir -p /opt/etcd/bin\
